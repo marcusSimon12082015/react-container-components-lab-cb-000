@@ -1,5 +1,7 @@
 // Code MovieReviews Here
-export default class MovieReviews{
+import React, { Component } from 'react';
+
+export default class MovieReviews extends React.Component{
   render(){
     return(<div className='review-list'>
     <ul>
