@@ -20,7 +20,7 @@ export default class LatestMovieReviewsContainer extends React.Component{
     .then(response => response.json())
     .then(reviews => this.setState({ reviews }))
   }
-  
+
   render(){
     return(<div className='latest-movie-reviews'></div>)
   }
