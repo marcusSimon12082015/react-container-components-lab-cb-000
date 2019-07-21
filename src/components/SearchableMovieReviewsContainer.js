@@ -14,9 +14,10 @@ export default class SearchableMovieReviewsContainer extends React.Component{
       reviews:[],
       searchTerm:''
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(){
+  handleSubmit(event){
     fetch(URL)
     .then(response => response.json())
     .then(reviews => this.setState({ reviews }))
@@ -25,7 +26,8 @@ export default class SearchableMovieReviewsContainer extends React.Component{
   render(){
     return(<div className='searchable-movie-reviews'>
       <form onSubmit={this.handleSubmit}>
-        <input value={this.state.searchTerm}></input>
+        <input type='text' value={this.state.searchTerm} />
+        <input type='submit' value='Submit' />
       </form>
       <MovieReviews reviews={this.state.reviews}/>
     </div>)
