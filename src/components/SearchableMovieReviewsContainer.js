@@ -28,4 +28,3 @@ export default class LatestMovieReviewsContainer extends React.Component{
     </div>)
   }
 }
-
